@@ -1,0 +1,29 @@
+:root{--bg:#e6f0e8;--ink:#17302b;--card:#fbfdfb;--acc:#2f7d6d;--onacc:#fff;--mut:#496560;--line:#17302b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10201d;--ink:#e2f1ea;--card:#1a302b;--acc:#6fd3bb;--onacc:#10201d;--mut:#a3c0b8;--line:#e2f1ea}}
+:root[data-theme="dark"]{--bg:#10201d;--ink:#e2f1ea;--card:#1a302b;--acc:#6fd3bb;--onacc:#10201d;--mut:#a3c0b8;--line:#e2f1ea}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45}
+#app{max-width:34rem;margin:0 auto;padding:1.2rem 1.1rem 6rem}
+h1{font-size:2rem;line-height:1.1;margin:.2rem 0 .5rem;font-weight:800}
+h2{font-size:1.2rem;margin:1.4rem 0 .4rem}
+p{margin:.4rem 0}.mut{color:var(--mut)}
+.card{background:var(--card);border:2px solid var(--line);border-radius:1rem;padding:1rem;margin:.9rem 0}
+.big{font-size:3.4rem;font-weight:800;line-height:1}
+label{display:block;font-weight:700;margin:1rem 0 .3rem}
+input[type=text],input[type=number],textarea{width:100%;font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:.7rem;padding:.65rem}
+textarea{min-height:6rem;resize:vertical}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip,button{font:inherit;font-weight:700;cursor:pointer;border-radius:999px;border:2px solid var(--line);background:var(--card);color:var(--ink);padding:.45rem .9rem}
+.chip.on,button.p{background:var(--acc);color:var(--onacc)}
+button.p{padding:.75rem 1.3rem;font-size:1.05rem}
+button.w{width:100%;margin-top:.6rem}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:.4rem;background:var(--bg);border-top:2px solid var(--line);padding:.6rem .6rem calc(.6rem + env(safe-area-inset-bottom,0px))}
+nav button{flex:1;max-width:10rem;border-radius:.8rem}
+nav button.on{background:var(--acc);color:var(--onacc)}
+.note{border-left:6px solid var(--acc);padding:.2rem 0 .2rem .8rem;margin:.9rem 0}
+.breath{font-size:1.6rem;font-weight:800;text-align:center;padding:1.2rem 0}
+a{color:var(--acc);font-weight:700}
