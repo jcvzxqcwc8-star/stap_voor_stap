@@ -259,3 +259,33 @@ ul {
   color: var(--onacc);
   font-weight: 800;
 }
+
+/* ==========================================================
+   UPDATE-MELDING
+   ========================================================== */
+.upd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: var(--acc);
+  color: var(--onacc);
+  font-weight: 700;
+  padding: calc(0.6rem + env(safe-area-inset-top, 0px)) 0.8rem 0.6rem;
+}
+
+.upd button {
+  background: var(--onacc);
+  color: var(--acc);
+  border-color: var(--onacc);
+  padding: 0.3rem 0.9rem;
+}
+
+body.hasupd #app {
+  padding-top: 4.5rem;
+}

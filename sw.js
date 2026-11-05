@@ -1,10 +1,14 @@
 // Service worker: bewaart de app-bestanden zodat ze ook offline werken.
-const CACHE = "stap-voor-stap-v3";
+// Een nieuwe versie wacht tot de gebruiker in de app op "Vernieuwen" tikt.
+const CACHE = "stap-voor-stap-v4";
 const FILES = ["./", "index.html", "style.css", "app.js", "manifest.json", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)));
-  self.skipWaiting();
+});
+
+self.addEventListener("message", e => {
+  if (e.data && e.data.type === "SKIP_WAITING") self.skipWaiting();
 });
 
 self.addEventListener("activate", e => {
